@@ -2,15 +2,19 @@
 
     Sub Main()
         ' 1. Deklarirane na promenlivi
-        Dim S#, i%
-        '2. Vhodni danni 
-        '3, izchislitelna chst 
+        Dim S#, i%, N%, M%
+        '2. vhodni danni
+        Console.WriteLine("Vuvedete stoinost za N = ")
+        N = Console.ReadLine()
+        Console.WriteLine("Vuvedete stoinost za M = (M < N) ")
+        M = Console.ReadLine()
+        '3. Izchislitelna chast
         S = 0
-        For i = 1 To 1000
-            S = S + i   'S+=i(sukraten zapis)
+        For i = M To N
+            S = S + i / i 'S+=1/i
         Next
-        '4. Izchislitelna chast 
-        Console.WriteLine("S =" & S)
+        ' izvejdane na ekrana
+        Console.WriteLine("S=" & S)
         Console.ReadKey()
     End Sub
 
