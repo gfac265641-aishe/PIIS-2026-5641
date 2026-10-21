@@ -1,19 +1,30 @@
-﻿Module Module1
+﻿Imports System.Data.SqlClient
+
+Module Module1
 
     Sub Main()
-        '1. Деклариране на променливи и константи
-        Dim R As Double, S As Double, P As Double
-        Const pi As Double = 3.14159
-        '2. Входни данни
-        Console.WriteLine("Vuvedete radius = ")
-        R = Console.ReadLine()
-        '3. Изчислителна част 
-        S = pi * R ^ 2 ' лице на окръжност 
-        P = 2 * pi * R ' периметър на окръжност 
-        '4. Извеждане на резултати 
-        Console.WriteLine("Liceto e S =" & S)
-        Console.WriteLine("Perimerura P = " & P)
-        Console.ReadKey() ' оставя програмата отворена
+        ' 1. Deklarirane na promenlivi
+        Dim V1, T1, V2, T2, V, T As Single
+        '2. Vhodni danni 
+        Console.Write("Vuvedete V1= ")
+        V1 = Console.ReadLine()
+        Console.Write("Vuvedete T1= ")
+        T1 = Console.ReadLine()
+        Console.Write("Vuvedete V2= ")
+        V2 = Console.ReadLine()
+        Console.Write("Vuvedete T2= ")
+        T2 = Console.ReadLine()
+        '3. Izchislitelna chast 
+        V = V1 + V2
+        T = (V1 * T1 + V2 * T2) / V
+        '4. Izvejdane na rezultati 
+        Console.WriteLine("Vuvedete V = " & V)
+        Console.WriteLine("Vuvedete T = " & T)
+        Console.ReadKey()
+
+
+
+
     End Sub
 
 End Module
