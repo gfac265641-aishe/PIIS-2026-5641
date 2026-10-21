@@ -1,30 +1,26 @@
-﻿Imports System.Data.SqlClient
-
-Module Module1
+﻿Module Module1
 
     Sub Main()
-        ' 1. Deklarirane na promenlivi
-        Dim V1, T1, V2, T2, V, T As Single
+        '1. Deklarirane na promenlivi 
+        Dim x1#, y1#, z1#, x2#, y2#, z2#, D#
         '2. Vhodni danni 
-        Console.Write("Vuvedete V1= ")
-        V1 = Console.ReadLine()
-        Console.Write("Vuvedete T1= ")
-        T1 = Console.ReadLine()
-        Console.Write("Vuvedete V2= ")
-        V2 = Console.ReadLine()
-        Console.Write("Vuvedete T2= ")
-        T2 = Console.ReadLine()
+        Console.Write("Vuvedete x1 ")
+        x1 = Console.ReadLine()
+        Console.Write("Vuvedete y1 ")
+        y1 = Console.ReadLine()
+        Console.Write("Vuvedete z1 ")
+        z1 = Console.ReadLine()
+        Console.Write("Vuvedete x2 ")
+        x2 = Console.ReadLine()
+        Console.Write("Vuvedete y2 ")
+        y2 = Console.ReadLine()
+        Console.Write("Vuvedete z2 ")
+        z2 = Console.ReadLine()
         '3. Izchislitelna chast 
-        V = V1 + V2
-        T = (V1 * T1 + V2 * T2) / V
-        '4. Izvejdane na rezultati 
-        Console.WriteLine("Vuvedete V = " & V)
-        Console.WriteLine("Vuvedete T = " & T)
+        D = Math.Sqrt((x2 - x1) ^ 2 + (y2 - y1) ^ 2 + (z2 - z1) ^ 2)
+        '4. Izvejdane na danni
+        Console.WriteLine("D = " & D)
         Console.ReadKey()
-
-
-
-
     End Sub
 
 End Module
