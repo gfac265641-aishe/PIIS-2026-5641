@@ -2,39 +2,16 @@
 
     Sub Main()
         ' 1. Deklarirane na promenlivi
-        Dim a#, b#, S#, c$
-        ' 2. Vhodni danni 
-        Console.Write("Vuvedete purva stoinost")
-        a = Console.ReadLine()
-et1:    Console.Write("Vuvedete vtora stoinost")
-        b = Console.ReadLine()
-et2:    Console.Write("Vuvedete operaciq (+,-,*,/)")
-        c = Console.ReadLine()
-        '3. Izchislitelna chst 
+        Dim S#, i%
+        '2. Vhodni danni 
+        '3, izchislitelna chst 
         S = 0
-        Select Case c
-            Case "+"
-                S = a + b
-            Case "-"
-                S = a - b
-            Case "*"
-                S = a * b
-            Case "/"
-                If b <> 0 Then
-                    S = a / b
-                Else
-                    Console.WriteLine("Vuvedete chislo razlichno ot 0")
-                    GoTo et1
-                End If
-            Case Else
-                Console.WriteLine("vuvedete pravilna operaciq")
-                GoTo et2
-        End Select
-        '4. Izvejdane na rezultati 
-        Console.WriteLine(" S = " & a & c & b & " = " & S)
+        For i = 1 To 1000
+            S = S + i   'S+=i(sukraten zapis)
+        Next
+        '4. Izchislitelna chast 
+        Console.WriteLine("S =" & S)
         Console.ReadKey()
-
-
     End Sub
 
 End Module
