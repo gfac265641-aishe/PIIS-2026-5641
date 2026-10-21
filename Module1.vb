@@ -1,20 +1,17 @@
 ﻿Module Module1
 
     Sub Main()
-        ' 1. Deklarirane na promenlivi
-        Dim S#, i%, N%, M%
-        '2. vhodni danni
-        Console.WriteLine("Vuvedete stoinost za N = ")
+        '1. Деклариране на данни 
+        Dim P%, i%, N%
+        ' Въвеждане на данни 
+        Console.WriteLine("vuvedi N= ")
         N = Console.ReadLine()
-        Console.WriteLine("Vuvedete stoinost za M = (M < N) ")
-        M = Console.ReadLine()
-        '3. Izchislitelna chast
-        S = 0
-        For i = M To N
-            S = S + i / i 'S+=1/i
+        P = 1
+        '3. Изчислителна част 
+        For i = 1 To N
+            P = P * i
         Next
-        ' izvejdane na ekrana
-        Console.WriteLine("S=" & S)
+        Console.WriteLine("p=" & P)
         Console.ReadKey()
     End Sub
 
