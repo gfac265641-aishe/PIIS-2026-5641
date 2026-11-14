@@ -66,10 +66,10 @@
             End If
 
         Next
-        Console.WriteLine("Maksimalen element A(" & imax & ")=" & Max) 'A(i)= Max
+        Console.WriteLine("Maksimalen element A(" & imax & ")=" & Max) 'A(j)= Max
         Console.ReadKey()
 
-        'д/ минимален на елементите в масива
+        'д/ минимум на елементите в масива
         Dim Min#, imin%
         Min = A(1) : imin = 1
         For i = 2 To M
@@ -77,10 +77,31 @@
                 Min = A(i)
                 imin = i
             End If
+        Next
+        Console.WriteLine("Minimalen element A(" & imin & ")=" & Min) 'A(j)= Min
+        Console.ReadKey()
 
+        'е/  сортиране на елементи във възходящ ред на нов масив
+        Dim B() As Double
+        ReDim B(M)
+        Dim T#, j%
+
+        For i = 1 To M
+            B(i) = A(i)
         Next
 
+        For i = 1 To M - 1
+            For j = 1 To M - i
+                If B(j) > B(j + 1) Then
+                    T = B(j) : B(j) = B(j + 1) : B(j + 1) = T
+                End If
+            Next
+        Next
 
+        For i = 1 To M
+            Console.WriteLine("B(" & i & ")=" & B(i)) 'B(1)=-10
+            Console.ReadKey()
+        Next
     End Sub
 
 End Module
